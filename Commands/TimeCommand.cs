@@ -32,7 +32,7 @@ namespace MyFirstPlugin.Commands
                 ChatManager.serverSendMessage($"[<color=green>Time</color>] Используйте: {Syntax} - {Help}", Color.white, null, up.SteamPlayer(), EChatMode.SAY, null, true);
                 return;
             }
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standart Time");
+            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
             var time = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, timeZone);
             ChatManager.serverSendMessage($"[<color=green>Time</color>] МСК Время: {time}", Color.white, null, up.SteamPlayer(), EChatMode.SAY, null, true);
         }
